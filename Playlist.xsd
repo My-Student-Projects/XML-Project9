@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="playlist">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Music" minOccurs="3" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Artist" type="xs:string"/>
+								    <xs:complexType>
+										<xs:attribute name="genre" type="xs:string" use="required" />
+									</xs:complexType>
+							<xs:element name="Album" type="xs:string"/>
+								    <xs:complexType>
+										<xs:attribute name="year" type="xs:integer" use="required" />
+									</xs:complexType>
+							<xs:element name="Song" type="xs:string"/>
+								    <xs:complexType>
+										<xs:attribute name="length" type="xs:string" use="required" />
+									</xs:complexType>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
